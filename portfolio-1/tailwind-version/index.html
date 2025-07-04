@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ramish. | Graphic Designer Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: 'Poppins', 'Segoe UI', Arial, sans-serif; }
+    /* Custom keyframes for floating */
+    @layer utilities {
+      @keyframes floatHero {
+        0%, 100% { transform: translateY(0) scale(1); }
+        50% { transform: translateY(-18px) scale(1.04); }
+      }
+      .animate-float {
+        animation: floatHero 3.5s ease-in-out infinite;
+      }
+    }
+    /* Fade-in animation */
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(40px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .fade-section {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s cubic-bezier(.77,0,.18,1), transform 0.8s cubic-bezier(.77,0,.18,1);
+    }
+    .fade-section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-blue-200 to-blue-100 text-blue-900 min-h-screen">
+  <!-- Navbar -->
+  <header class="w-full border-b-4 border-white py-4 px-4 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <button class="block md:hidden text-2xl text-blue-800" aria-label="Open navigation">&#8942;</button>
+      <div class="font-bold text-xl text-blue-800">Ramish.</div>
+    </div>
+    <nav class="hidden md:block">
+      <ul class="flex gap-8 font-medium">
+        <li><a href="#about" class="hover:text-blue-300">About</a></li>
+        <li><a href="#services" class="hover:text-blue-300">Services</a></li>
+        <li><a href="#portfolio" class="hover:text-blue-300">Portfolio</a></li>
+        <li><a href="#contact" class="hover:text-blue-300">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="#contact" class="hidden md:inline-block bg-blue-900 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-800 transition">Hire Me</a>
+  </header>
+  <!-- Sidebar for mobile nav (hidden by default, add JS to toggle) -->
+  <div id="sidebar" class="fixed top-0 left-0 w-60 h-full bg-blue-100 shadow-lg z-50 p-6 flex flex-col gap-6 -translate-x-full transition-transform duration-300 md:hidden">
+    <button class="self-end text-2xl text-blue-900" aria-label="Close navigation">&times;</button>
+    <nav>
+      <ul class="flex flex-col gap-6 text-lg">
+        <li><a href="#about" class="hover:text-blue-400">About</a></li>
+        <li><a href="#services" class="hover:text-blue-400">Services</a></li>
+        <li><a href="#portfolio" class="hover:text-blue-400">Portfolio</a></li>
+        <li><a href="#contact" class="hover:text-blue-400">Contact</a></li>
+      </ul>
+      <a href="#contact" class="mt-8 block bg-blue-900 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-800 transition">Hire Me</a>
+    </nav>
+  </div>
+  <!-- Hero Section -->
+  <section class="fade-section flex flex-col md:flex-row items-center justify-between gap-8 md:gap-0 px-4 py-12 md:py-16 md:px-12 bg-gradient-to-r from-blue-200 via-blue-100 to-blue-200 rounded-xl shadow-lg mt-6 mx-2 md:mx-8">
+    <div class="md:w-1/2 space-y-4">
+      <h2 class="text-lg text-blue-800">Hi, I'm Ramish Malik</h2>
+      <h1 class="text-3xl md:text-4xl font-bold">I create stunning, modern <span class="text-blue-400">graphic designs</span> that inspire.</h1>
+      <p class="text-base md:text-lg">A passionate graphic designer with a love for visual storytelling, branding, and creative solutions.</p>
+      <a href="#portfolio" class="inline-block bg-white text-blue-900 border-2 border-blue-900 px-6 py-2 rounded-full font-semibold hover:bg-blue-900 hover:text-white transition transform hover:scale-105 active:scale-95 duration-200">View My Work</a>
+    </div>
+    <div class="md:w-1/2 flex justify-center">
+      <img src="../imgi_40_25e083228714527.685832bf1dbf4.png" alt="Ramish Malik - Graphic Designer" class="w-44 h-44 md:w-56 md:h-56 rounded-full shadow-lg object-cover bg-white hover:scale-105 transition animate-float" />
+    </div>
+  </section>
+  <!-- About Section -->
+  <section id="about" class="fade-section flex flex-col md:flex-row items-center gap-8 md:gap-16 rounded-xl shadow-lg mt-10 mx-2 md:mx-8 p-6 md:p-12">
+    <div class="flex justify-center items-center w-full md:w-1/3">
+      <img src="../imgi_40_25e083228714527.685832bf1dbf4.png" alt="Ramish Malik" class="w-44 h-52 md:w-72 md:h-80 rounded-full object-cover shadow-md bg-white" />
+    </div>
+    <div class="w-full md:w-2/3 space-y-4">
+      <h3 class="text-2xl font-semibold flex items-center gap-2"><span aria-hidden="true">👤</span>About Me</h3>
+      <p>I'm a creative graphic designer with 5+ years of experience crafting visual identities, marketing materials, and digital assets for brands and businesses. I thrive on turning ideas into visually compelling designs that communicate and captivate.</p>
+      <h4 class="text-lg font-semibold flex items-center gap-2 mt-4"><span aria-hidden="true">🎓</span>Education</h4>
+      <p>2021–2024<br>BA (Hons) Graphic Design<br>National College of Arts, Lahore</p>
+      <h4 class="text-lg font-semibold flex items-center gap-2 mt-4"><span aria-hidden="true">⭐</span>Skills</h4>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-2 mt-2">
+        <span class="bg-blue-200 text-blue-900 px-3 py-1 rounded text-sm font-medium text-center">Branding</span>
+        <span class="bg-blue-200 text-blue-900 px-3 py-1 rounded text-sm font-medium text-center">Logo Design</span>
+        <span class="bg-blue-200 text-blue-900 px-3 py-1 rounded text-sm font-medium text-center">Illustration</span>
+        <span class="bg-blue-200 text-blue-900 px-3 py-1 rounded text-sm font-medium text-center">Print Design</span>
+        <span class="bg-blue-200 text-blue-900 px-3 py-1 rounded text-sm font-medium text-center">UI Graphics</span>
+        <span class="bg-blue-200 text-blue-900 px-3 py-1 rounded text-sm font-medium text-center">Photo Editing</span>
+      </div>
+    </div>
+  </section>
+  <!-- Services Section -->
+  <section id="services" class="fade-section text-center mt-10 mx-2 md:mx-8">
+    <h3 class="text-xl font-semibold mb-2">Services I Provide</h3>
+    <p class="mb-6">I design thoughtful, visually engaging digital and print experiences.</p>
+    <div class="flex flex-wrap justify-center gap-6">
+      <div class="bg-blue-100 rounded-xl shadow-md p-6 w-64 flex flex-col items-center transform transition hover:scale-105 hover:shadow-xl duration-200">
+        <div class="text-3xl mb-2">🎨</div>
+        <h4 class="font-semibold text-lg mb-1">Brand Identity</h4>
+        <p>Logos, color palettes, and brand guidelines that define your business.</p>
+      </div>
+      <div class="bg-blue-100 rounded-xl shadow-md p-6 w-64 flex flex-col items-center transform transition hover:scale-105 hover:shadow-xl duration-200">
+        <div class="text-3xl mb-2">🖥️</div>
+        <h4 class="font-semibold text-lg mb-1">Digital Design</h4>
+        <p>Web graphics, social media posts, banners, and more for your online presence.</p>
+      </div>
+      <div class="bg-blue-100 rounded-xl shadow-md p-6 w-64 flex flex-col items-center transform transition hover:scale-105 hover:shadow-xl duration-200">
+        <div class="text-3xl mb-2">🖨️</div>
+        <h4 class="font-semibold text-lg mb-1">Print Design</h4>
+        <p>Brochures, flyers, posters, and packaging that make an impact.</p>
+      </div>
+      <div class="bg-blue-100 rounded-xl shadow-md p-6 w-64 flex flex-col items-center transform transition hover:scale-105 hover:shadow-xl duration-200">
+        <div class="text-3xl mb-2">📊</div>
+        <h4 class="font-semibold text-lg mb-1">Infographic Design</h4>
+        <p>Visually engaging infographics to communicate complex data and ideas clearly.</p>
+      </div>
+      <div class="bg-blue-100 rounded-xl shadow-md p-6 w-64 flex flex-col items-center transform transition hover:scale-105 hover:shadow-xl duration-200">
+        <div class="text-3xl mb-2">📽️</div>
+        <h4 class="font-semibold text-lg mb-1">Presentation Design</h4>
+        <p>Custom PowerPoint and Keynote presentations that captivate your audience.</p>
+      </div>
+    </div>
+  </section>
+  <!-- Process Section -->
+  <section class="fade-section text-center mt-10 mx-2 md:mx-8">
+    <h3 class="text-xl font-semibold mb-2">How I Work / My Design Process</h3>
+    <p class="mb-6">A structured, creative approach to turning ideas into visual stories.</p>
+    <div class="flex flex-wrap justify-center gap-6 mt-4">
+      <div class="bg-blue-100 rounded-lg shadow p-4 w-32 flex flex-col items-center transform transition hover:scale-105 hover:shadow-xl duration-200">
+        <div class="bg-blue-400 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mb-2">1</div>
+        <p>Research & Discovery</p>
+      </div>
+      <div class="bg-blue-100 rounded-lg shadow p-4 w-32 flex flex-col items-center transform transition hover:scale-105 hover:shadow-xl duration-200">
+        <div class="bg-blue-400 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mb-2">2</div>
+        <p>Concept Development</p>
+      </div>
+      <div class="bg-blue-100 rounded-lg shadow p-4 w-32 flex flex-col items-center transform transition hover:scale-105 hover:shadow-xl duration-200">
+        <div class="bg-blue-400 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mb-2">3</div>
+        <p>Design & Iteration</p>
+      </div>
+      <div class="bg-blue-100 rounded-lg shadow p-4 w-32 flex flex-col items-center transform transition hover:scale-105 hover:shadow-xl duration-200">
+        <div class="bg-blue-400 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mb-2">4</div>
+        <p>Client Feedback</p>
+      </div>
+      <div class="bg-blue-100 rounded-lg shadow p-4 w-32 flex flex-col items-center transform transition hover:scale-105 hover:shadow-xl duration-200">
+        <div class="bg-blue-400 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mb-2">5</div>
+        <p>Final Delivery</p>
+      </div>
+    </div>
+  </section>
+  <!-- Tools Section -->
+  <section class="fade-section text-center mt-10 mx-2 md:mx-8">
+    <h3 class="text-xl font-semibold mb-2">Tools I Use</h3>
+    <p class="mb-6">I bring my designs to life using industry-leading tools.</p>
+    <div class="flex flex-wrap justify-center gap-6 mt-4">
+      <div class="flex flex-col items-center gap-2 bg-white rounded-xl shadow p-4 w-32 transform transition hover:scale-105 hover:shadow-xl duration-200">
+        <img src="../photoshop.svg" alt="Photoshop" class="w-12 h-12" />
+        <span class="font-medium text-blue-900">Photoshop</span>
+      </div>
+      <div class="flex flex-col items-center gap-2 bg-white rounded-xl shadow p-4 w-32 transform transition hover:scale-105 hover:shadow-xl duration-200">
+        <img src="../illustrator.svg" alt="Illustrator" class="w-12 h-12" />
+        <span class="font-medium text-blue-900">Illustrator</span>
+      </div>
+      <div class="flex flex-col items-center gap-2 bg-white rounded-xl shadow p-4 w-32 transform transition hover:scale-105 hover:shadow-xl duration-200">
+        <img src="../figma.svg" alt="Figma" class="w-12 h-12" />
+        <span class="font-medium text-blue-900">Figma</span>
+      </div>
+      <div class="flex flex-col items-center gap-2 bg-white rounded-xl shadow p-4 w-32 transform transition hover:scale-105 hover:shadow-xl duration-200">
+        <img src="../canva.svg" alt="Canva" class="w-12 h-12" />
+        <span class="font-medium text-blue-900">Canva</span>
+      </div>
+      <div class="flex flex-col items-center gap-2 bg-white rounded-xl shadow p-4 w-32 transform transition hover:scale-105 hover:shadow-xl duration-200">
+        <img src="../indesign.svg" alt="InDesign" class="w-12 h-12" />
+        <span class="font-medium text-blue-900">InDesign</span>
+      </div>
+    </div>
+  </section>
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="fade-section text-center mt-10 mx-2 md:mx-8">
+    <h3 class="text-xl font-semibold mb-2">Featured Projects</h3>
+    <p class="mb-6">A selection of my best design projects — from brand identities to digital campaigns.</p>
+    <div class="flex flex-wrap justify-center gap-6">
+      <div class="flex bg-blue-100 rounded-xl shadow-md p-4 max-w-xs w-full gap-4 items-center transform transition hover:scale-105 hover:shadow-xl duration-200">
+        <img src="../imgi_25_25e083228714527.685832bf1dbf4.png" alt="Brand Identity for Luxe Boutique" class="w-20 h-20 rounded-lg object-cover bg-white" />
+        <div class="text-left">
+          <h4 class="font-semibold text-lg mb-1">Brand Identity for Luxe Boutique</h4>
+          <p class="text-sm">Developed a luxurious and modern brand identity for a boutique, including logo, packaging, and social media assets.</p>
+          <a href="#" class="text-blue-900 underline font-medium mt-2 inline-block hover:text-blue-400">View Case Study</a>
+        </div>
+      </div>
+      <div class="flex bg-blue-100 rounded-xl shadow-md p-4 max-w-xs w-full gap-4 items-center transform transition hover:scale-105 hover:shadow-xl duration-200">
+        <img src="../imgi_25_25e083228714527.685832bf1dbf4.png" alt="Event Poster Series" class="w-20 h-20 rounded-lg object-cover bg-white" />
+        <div class="text-left">
+          <h4 class="font-semibold text-lg mb-1">Event Poster Series</h4>
+          <p class="text-sm">Designed a vibrant poster series for a cultural festival, blending illustration and typography for maximum impact.</p>
+          <a href="#" class="text-blue-900 underline font-medium mt-2 inline-block hover:text-blue-400">View Case Study</a>
+        </div>
+      </div>
+      <div class="flex bg-blue-100 rounded-xl shadow-md p-4 max-w-xs w-full gap-4 items-center transform transition hover:scale-105 hover:shadow-xl duration-200">
+        <img src="../imgi_25_25e083228714527.685832bf1dbf4.png" alt="Creative Social Media Campaign" class="w-20 h-20 rounded-lg object-cover bg-white" />
+        <div class="text-left">
+          <h4 class="font-semibold text-lg mb-1">Creative Social Media Campaign</h4>
+          <p class="text-sm">Crafted engaging visuals and layouts for a brand's social media campaign, boosting online presence and audience interaction.</p>
+          <a href="#" class="text-blue-900 underline font-medium mt-2 inline-block hover:text-blue-400">View Case Study</a>
+        </div>
+      </div>
+      <div class="flex bg-blue-100 rounded-xl shadow-md p-4 max-w-xs w-full gap-4 items-center transform transition hover:scale-105 hover:shadow-xl duration-200">
+        <img src="../imgi_25_25e083228714527.685832bf1dbf4.png" alt="Minimalist Packaging Design" class="w-20 h-20 rounded-lg object-cover bg-white" />
+        <div class="text-left">
+          <h4 class="font-semibold text-lg mb-1">Minimalist Packaging Design</h4>
+          <p class="text-sm">Designed sleek, minimalist packaging for a new product line, focusing on clarity, shelf appeal, and brand consistency.</p>
+          <a href="#" class="text-blue-900 underline font-medium mt-2 inline-block hover:text-blue-400">View Case Study</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Contact Section -->
+  <section id="contact" class="fade-section text-center mt-10 mx-2 md:mx-8">
+    <h3 class="text-xl font-semibold mb-2">Let's Connect</h3>
+    <p class="mb-6">I'm open to freelance projects, collaborations, or just a friendly chat about design. Let's bring your ideas to life.</p>
+    <div class="flex flex-col md:flex-row justify-center gap-8 mt-4">
+      <ul class="text-left text-base text-blue-900 space-y-2 md:w-1/3 mx-auto">
+        <li class="flex items-center gap-2"><span>📞</span> +92 0300-1234567</li>
+        <li class="flex items-center gap-2"><span>✉️</span> temp@gmail.com</li>
+        <li class="flex items-center gap-2"><span>🔗</span> <a href="https://www.linkedin.com/in/Ramish-Malik-7a0992255/" target="_blank" class="underline hover:text-blue-400">LinkedIn</a></li>
+        <li class="flex items-center gap-2"><span>📍</span> Islamabad, Pakistan</li>
+      </ul>
+      <form class="flex flex-col gap-4 bg-blue-100 p-6 rounded-xl shadow-md md:w-1/3 mx-auto">
+        <input type="text" placeholder="Name *" required class="px-4 py-2 rounded border border-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+        <input type="email" placeholder="Email *" required class="px-4 py-2 rounded border border-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+        <textarea placeholder="Your Message" required class="px-4 py-2 rounded border border-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-400"></textarea>
+        <button type="submit" class="bg-blue-900 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-800 transition transform hover:scale-105 active:scale-95 duration-200">Contact Me</button>
+      </form>
+    </div>
+  </section>
+  <footer class="text-center text-blue-800 text-sm py-6 mt-10">&copy; 2024 Ramish Malik. All rights reserved.</footer>
+  <script src="/script.js"></script>
+  <script>
+    // Fade-in on scroll for sections
+    document.addEventListener('DOMContentLoaded', function() {
+      const fadeSections = document.querySelectorAll('.fade-section');
+      const observer = new window.IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+      fadeSections.forEach(section => observer.observe(section));
+    });
+  </script>
+</body>
+</html> 
